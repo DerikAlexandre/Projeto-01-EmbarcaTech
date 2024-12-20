@@ -1,4 +1,15 @@
 #include<stdio.h>
+
+void comprimento(){}
+
+void massa(){}
+
+void volume(){}
+
+void temperatura(){}
+
+void tempo(){}
+
 int main(){
 
   int opcao;
