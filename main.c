@@ -43,7 +43,7 @@ void temperatura(float valor){
 
 
     case 5: 
-    result = valor-273-15;
+    result = valor-273.15;
     printf("\nValor convertido: %.2fC", result);
     break;
 
