@@ -1,6 +1,6 @@
 # Projeto-01-EmbarcaTech
 
-SubGrupo 9 - Adryellen, Carlos, Derik, Graziele, Luis, Rhalyson e Uriel 
+SubGrupo 9 - Adryellen, Carlos, Derik, Graziele, Júnior, Rhalyson e Uriel.
 
 Exemplo de Tarefas que o grupo poderá desenvolver.
 Observação: Não é obrigatório implementar todas as conversões sugeridas.
