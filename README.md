@@ -2,19 +2,8 @@
 
 SubGrupo 9 - Adryellen, Carlos, Derik, Graziele, Júnior, Rhalyson e Uriel.
 
-Exemplo de Tarefas que o grupo poderá desenvolver.
-Observação: Não é obrigatório implementar todas as conversões sugeridas.
-1. Unidades de comprimento (metro, centímetro, milímetro)
-2. Unidades de massa (quilograma, grama, tonelada)
-3. Unidades de volume (litro, mililitro, metros cúbicos)
-4. Unidades de temperatura (Celsius, Fahrenheit, Kelvin)
-5. Unidades de velocidade (km/h, m/s, mph)
-6. Watts (W), quilowatts (kW), cavalos-vapor (cv ou hp)
-7. Unidades de área (metro quadrado, centímetro quadrado)
-8. Unidades de tempo (segundos, minutos, horas)
-9. Bits, bytes, kilobytes (KB), megabytes (MB), gigabytes (GB), terabytes (TB)
-10. Interface de usuário
-11. Testes e depuração
+O projeto foi desenvolvido com o objetivo de realizar conversões entre diferentes unidades de medida. Ele inclui funcionalidades para conversão de temperatura, velocidade e potência. 
+O usuário pode selecionar a modalidade de conversão desejada e inserir o valor a ser convertido, que será automaticamente alterado para a unidade escolhida.
 
 Na etapa de desenvolvimento deve-se:
 • Cada desenvolvedor criar branch (ex: feature/comprimento).
