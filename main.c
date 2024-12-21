@@ -14,13 +14,13 @@ void temperatura(float valor){
   int selecao;
   float result;
   printf("\n\n===Insira a conversao que deseja realizar:===\n\n");
-  printf("1-Celsius para Fahrenheit\n");
-  printf("2-Celsius para Kelvin\n");
-  printf("3-Fahrenheit para Celsius\n");
-  printf("4-Fahrenheit para Kelvin\n");
-  printf("5-Kelvin para Celsius\n");
-  printf("6-Kelvin para Fahrenheit\n");
-  printf("\n====================\n");
+  printf("1-Celsius -> Fahrenheit\n");
+  printf("2-Celsius -> Kelvin    \n");
+  printf("3-Fahrenheit -> Celsius\n");
+  printf("4-Fahrenheit -> Kelvin \n");
+  printf("5-Kelvin -> Celsius    \n");
+  printf("6-Kelvin -> Fahrenheit \n");
+  printf("\n=====================\n");
   scanf("%d", &selecao);
 
   switch(selecao){
@@ -71,16 +71,16 @@ void velocidade(float valor)
   int opcao;
   float valorConvertido;
 
-  printf("\n================ CONVERSÃO DE VELOCIDADE ================\n");
-  printf(" Escolha a conversão desejada:                        \n");
-  printf(" 1 - Metros por segundo (m/s) -> Kilômetros por hora (km/h) \n");
+  printf("\n================ CONVERSAO DE VELOCIDADE ================\n");
+  printf(" Escolha a conversao desejada:                        \n");
+  printf(" 1 - Metros por segundo (m/s) -> Kilometros por hora (km/h) \n");
   printf(" 2 - Metros por segundo (m/s) -> Milhas por hora (mph) \n");
-  printf(" 3 - Kilômetros por hora (km/h) -> Metros por segundo (m/s) \n");
-  printf(" 4 - Kilômetros por hora (km/h) -> Milhas por hora (mph) \n");
-  printf(" 5 - Milhas por hora (mph) -> Kilômetros por hora (km/h) \n");
+  printf(" 3 - Kilometros por hora (km/h) -> Metros por segundo (m/s) \n");
+  printf(" 4 - Kilometros por hora (km/h) -> Milhas por hora (mph) \n");
+  printf(" 5 - Milhas por hora (mph) -> Kilometros por hora (km/h) \n");
   printf(" 6 - Milhas por hora (mph) -> Metros por segundo (m/s)\n");
   printf("=========================================================\n");
-  printf("Digite sua opção: ");
+  printf("Digite sua opcao: ");
   scanf("%d", &opcao);
 
   switch (opcao)
@@ -120,7 +120,7 @@ void potencia(float valor)
   int opcao;
   float valorConvertido;
 
-  printf("\n================ CONVERSÃO DE POTÊNCIA ================\n");
+  printf("\n================ CONVERSAO DE POTENCIA ================\n");
   printf(" Escolha a conversão desejada:                      \n");
   printf(" 1 - Watts (W) -> Kilowatts (kW)                    \n");
   printf(" 2 - Watts (W) -> Cavalo-vapor (cv)                 \n");
@@ -129,7 +129,7 @@ void potencia(float valor)
   printf(" 5 - Cavalo-vapor (cv) -> Watts (W)                 \n");
   printf(" 6 - Cavalo-vapor (cv) -> Kilowatts (kW)            \n");
   printf("======================================================\n");
-  printf("Digite sua opção: ");
+  printf("Digite sua opcao: ");
   scanf("%d", &opcao);
 
   switch (opcao)
@@ -181,11 +181,11 @@ int main()
     printf(" 6 - Unidades de velocidade                        \n");
     printf(" 7 - Unidades de potência                          \n");
     printf("=====================================================\n");
-    printf("Digite sua opção: ");
+    printf("Digite sua opcao: ");
     scanf("%d", &opcao);
   } while (opcao < 1 || opcao > 7);
 
-  printf("\nDigite o valor para conversão: ");
+  printf("\nDigite o valor para conversao: ");
   scanf("%f", &valor);
 
   switch (opcao)
@@ -212,7 +212,7 @@ int main()
     potencia(valor);
     break;
   default:
-    printf("\nOpção inválida!\n");
+    printf("\nOpcao invalida!\n");
     break;
   }
 
