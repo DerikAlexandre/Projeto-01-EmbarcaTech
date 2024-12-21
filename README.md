@@ -2,7 +2,7 @@
 
 SubGrupo 9 - Adryellen, Carlos, Derik, Graziele, Júnior, Rhalyson e Uriel.
 
-O projeto foi desenvolvido com o objetivo de realizar conversões entre diferentes unidades de medida. Ele inclui funcionalidades para conversão de temperatura, velocidade e potência. 
+O projeto foi desenvolvido com o objetivo de realizar conversões entre diferentes unidades de medida. Ele inclui funcionalidades para conversão de temperatura, velocidade e potência.
 O usuário pode selecionar a modalidade de conversão desejada e inserir o valor a ser convertido, que será automaticamente alterado para a unidade escolhida.
 
 Na etapa de desenvolvimento deve-se:
