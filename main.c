@@ -15,63 +15,6 @@ void temperatura(float valor)
 void tempo(float valor)
 {
 }
-void velocidade(float valor);
-void potencia(float valor);
-
-int main()
-{
-  int opcao;
-  float valor;
-
-  do
-  {
-    printf("\n======================== MENU ========================\n");
-    printf(" Escolha a opção desejada:                         \n");
-    printf(" 1 - Unidades de comprimento                       \n");
-    printf(" 2 - Unidades de massa                             \n");
-    printf(" 3 - Unidades de volume                            \n");
-    printf(" 4 - Unidades de temperatura                       \n");
-    printf(" 5 - Unidades de tempo                             \n");
-    printf(" 6 - Unidades de velocidade                        \n");
-    printf(" 7 - Unidades de potência                          \n");
-    printf("=====================================================\n");
-    printf("Digite sua opção: ");
-    scanf("%d", &opcao);
-  } while (opcao < 1 || opcao > 7);
-
-  printf("\nDigite o valor para conversão: ");
-  scanf("%f", &valor);
-
-  switch (opcao)
-  {
-  case 1:
-    comprimento(valor);
-    break;
-  case 2:
-    massa(valor);
-    break;
-  case 3:
-    volume(valor);
-    break;
-  case 4:
-    temperatura(valor);
-    break;
-  case 5:
-    tempo(valor);
-    break;
-  case 6:
-    velocidade(valor);
-    break;
-  case 7:
-    potencia(valor);
-    break;
-  default:
-    printf("\nOpção inválida!\n");
-    break;
-  }
-
-  return 0;
-}
 
 void velocidade(float valor)
 {
@@ -170,3 +113,60 @@ void potencia(float valor)
     return;
   }
 }
+
+int main()
+{
+  int opcao;
+  float valor;
+
+  do
+  {
+    printf("\n======================== MENU ========================\n");
+    printf(" Escolha a opção desejada:                         \n");
+    printf(" 1 - Unidades de comprimento                       \n");
+    printf(" 2 - Unidades de massa                             \n");
+    printf(" 3 - Unidades de volume                            \n");
+    printf(" 4 - Unidades de temperatura                       \n");
+    printf(" 5 - Unidades de tempo                             \n");
+    printf(" 6 - Unidades de velocidade                        \n");
+    printf(" 7 - Unidades de potência                          \n");
+    printf("=====================================================\n");
+    printf("Digite sua opção: ");
+    scanf("%d", &opcao);
+  } while (opcao < 1 || opcao > 7);
+
+  printf("\nDigite o valor para conversão: ");
+  scanf("%f", &valor);
+
+  switch (opcao)
+  {
+  case 1:
+    comprimento(valor);
+    break;
+  case 2:
+    massa(valor);
+    break;
+  case 3:
+    volume(valor);
+    break;
+  case 4:
+    temperatura(valor);
+    break;
+  case 5:
+    tempo(valor);
+    break;
+  case 6:
+    velocidade(valor);
+    break;
+  case 7:
+    potencia(valor);
+    break;
+  default:
+    printf("\nOpção inválida!\n");
+    break;
+  }
+
+  return 0;
+}
+
+
