@@ -13,7 +13,7 @@ void temperatura(float valor){
 
   int selecao;
   float result;
-  printf("\n\n===Insira a conversao que deseja realizar:===\n\n");
+  printf("\n\n===CONVERSAO DE TEMPERATURA:===\n\n");
   printf("1-Celsius -> Fahrenheit\n");
   printf("2-Celsius -> Kelvin    \n");
   printf("3-Fahrenheit -> Celsius\n");
