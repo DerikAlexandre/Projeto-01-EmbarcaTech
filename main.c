@@ -72,7 +72,50 @@ double mm_para_cm(double mm) { return mm / 10.0; }
 
 void massa(float valor)
 {
-}
+   int medidaAtual, medidaASerConvertida;
+    double valorConvertido;
+
+    do {
+        printf("Em qual unidade de medida está o valor que deseja converter? Escolha entre as opcoes:\n");
+        printf("1 - Decagrama (dag)\n");
+        printf("2 - Hectograma (hg)\n");
+        printf("3 - Quilograma (kg)\n");
+        printf("4 - Grama (g)\n");
+        printf("5 - Decigrama (dg)\n");
+        printf("6 - Centigrama (cg)\n");
+        printf("7 - Miligrama (mg)\n");
+        scanf("%d", &medidaAtual);
+
+        if (medidaAtual < 1 || medidaAtual > 7) {
+            printf("Opção invalida. Tente novamente.\n");
+        }
+    } while (medidaAtual < 1 || medidaAtual > 7);
+
+    do {
+        printf("Para qual unidade de medida deseja converter? Escolha entre as opcoes:\n");
+        printf("1 - Decagrama (dag)\n");
+        printf("2 - Hectograma (hg)\n");
+        printf("3 - Quilograma (kg)\n");
+        printf("4 - Grama (g)\n");
+        printf("5 - Decigrama (dg)\n");
+        printf("6 - Centigrama (cg)\n");
+        printf("7 - Miligrama (mg)\n");
+        scanf("%d", &medidaASerConvertida);
+
+        if (medidaASerConvertida < 1 || medidaASerConvertida > 7) {
+            printf("Opção invalida. Tente novamente.\n");
+        }
+    } while (medidaASerConvertida < 1 || medidaASerConvertida > 7);
+
+    double fatores[7] = {10.0, 100.0, 1000.0, 1.0, 0.1, 0.01, 0.001};
+
+    valorConvertido = (valor * fatores[medidaAtual - 1]) / fatores[medidaASerConvertida - 1];
+
+  
+    printf("O valor %.2lf na unidade %d convertido para a unidade %d eh: %.2lf\n",
+           valor, medidaAtual, medidaASerConvertida, valorConvertido);
+   }
+
 
 
 void volume(float valor)
