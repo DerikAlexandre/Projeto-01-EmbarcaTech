@@ -18,20 +18,20 @@ void comprimento(float valor) {
     int escolha;
     double resultado;
 
-    printf("Escolha a conversão que deseja realizar:\n");
-    printf("1 - Metros (m) para Quilômetros (Km) \n");
-    printf("2 - Metros (m) para Centímetros (cm) \n");
-    printf("3 - Metros (m) para Milímetros (mm) \n");
-    printf("4 - Quilômetros (Km) para Metros (m) \n");
-    printf("5 - Quilômetros (Km) para Centímetros (cm) \n");
-    printf("6 - Quilômetros (Km) para Milímetros (mm) \n");
-    printf("7 - Centímetros (cm) para Metros (m) \n");
-    printf("8 - Centímetros (cm) para Quilômetros (Km)\n");
-    printf("9 - Centímetros (cm) para Milímetros (mm) \n");
-    printf("10 - Milímetros (mm) para Quilômetros (Km)\n");
-    printf("11 - Milímetros (mm) para Metros (m) \n");
-    printf("12 - Milímetros (mm) para Centímetros (cm) \n");
-    printf("Escolha uma opção (1-12): \n");
+    printf("\n\n===== CONVERSAO DE COMPRIMENTO =====\n\n");
+    printf("1 - Metros (m) -> Quilometros (Km)      \n");
+    printf("2 - Metros (m) -> Centimetros (cm)      \n");
+    printf("3 - Metros (m) -> Milimetros (mm)       \n");
+    printf("4 - Quilometros (Km) -> Metros (m)      \n");
+    printf("5 - Quilometros (Km) -> Centimetros (cm)\n");
+    printf("6 - Quilometros (Km) -> Milimetros (mm) \n");
+    printf("7 - Centimetros (cm) -> Metros (m)      \n");
+    printf("8 - Centimetros (cm) -> Quilometros (Km)\n");
+    printf("9 - Centimetros (cm) -> Milimetros (mm) \n");
+    printf("10 - Milimetros (mm) -> Quilometros (Km)\n");
+    printf("11 - Milimetros (mm) -> Metros (m)      \n");
+    printf("12 - Milimetros (mm) -> Centimetros (cm)\n");
+    printf("Escolha uma opcao (1-12): \n");
     scanf("%d", &escolha);
 
     switch (escolha) {
@@ -48,43 +48,66 @@ void comprimento(float valor) {
         case 11: resultado = mm_para_m(valor); break;
         case 12: resultado = mm_para_cm(valor); break;
         default:
-            printf("Opção inválida!\n");
+            printf("Opcao invalida!\n");
             return;
     }
 
     printf("Resultado: %.6f\n", resultado);
 }
 
-// Implementação das funções de conversão
-double m_para_km(double m) { return m / 1000.0; }
-double m_para_cm(double m) { return m * 100.0; }
-double m_para_mm(double m) { return m * 1000.0; }
-double km_para_m(double km) { return km * 1000.0; }
-double km_para_cm(double km) { return km * 100000.0; }
-double km_para_mm(double km) { return km * 1000000.0; }
-double cm_para_m(double cm) { return cm / 100.0; }
-double cm_para_km(double cm) { return cm / 100000.0; }
-double cm_para_mm(double cm) { return cm * 10.0; }
-double mm_para_km(double mm) { return mm / 1000000.0; }
-double mm_para_m(double mm) { return mm / 1000.0; }
-double mm_para_cm(double mm) { return mm / 10.0; }
-
-
 void massa(float valor)
 {
-}
+   int medidaAtual, medidaASerConvertida;
+    double valorConvertido;
 
+    do {
+        printf("\n\n===== CONVERSAO DE MASSA =====\n\n");
+        printf("Em qual unidade de medida esta o valor que deseja converter?\n");
+        printf("1 - Decagrama (dag)\n");
+        printf("2 - Hectograma (hg)\n");
+        printf("3 - Quilograma (kg)\n");
+        printf("4 - Grama (g)      \n");
+        printf("5 - Decigrama (dg) \n");
+        printf("6 - Centigrama (cg)\n");
+        printf("7 - Miligrama (mg) \n");
+        scanf("%d", &medidaAtual);
 
-void volume(float valor)
-{
-}
+        if (medidaAtual < 1 || medidaAtual > 7) {
+            printf("Opcao invalida. Tente novamente.\n");
+        }
+    } while (medidaAtual < 1 || medidaAtual > 7);
+
+    do {
+        printf("Para qual unidade de medida deseja converter?\n");
+        printf("1 - Decagrama (dag)\n");
+        printf("2 - Hectograma (hg)\n");
+        printf("3 - Quilograma (kg)\n");
+        printf("4 - Grama (g)      \n");
+        printf("5 - Decigrama (dg) \n");
+        printf("6 - Centigrama (cg)\n");
+        printf("7 - Miligrama (mg) \n");
+        scanf("%d", &medidaASerConvertida);
+
+        if (medidaASerConvertida < 1 || medidaASerConvertida > 7) {
+            printf("Opcao invalida. Tente novamente.\n");
+        }
+    } while (medidaASerConvertida < 1 || medidaASerConvertida > 7);
+
+    double fatores[7] = {10.0, 100.0, 1000.0, 1.0, 0.1, 0.01, 0.001};
+
+    valorConvertido = (valor * fatores[medidaAtual - 1]) / fatores[medidaASerConvertida - 1];
+
+  
+    printf("O valor %.2lf na unidade %d convertido para a unidade %d eh: %.5lf\n",
+           valor, medidaAtual, medidaASerConvertida, valorConvertido);
+   }
 
 
 void temperatura(float valor){
 
   int selecao;
   float result;
-  printf("\n\n===CONVERSAO DE TEMPERATURA:===\n\n");
+  printf("\n\n=== CONVERSAO DE TEMPERATURA ===\n\n");
   printf("1-Celsius -> Fahrenheit\n");
   printf("2-Celsius -> Kelvin    \n");
   printf("3-Fahrenheit -> Celsius\n");
@@ -133,10 +156,6 @@ void temperatura(float valor){
 
 }
 
-void tempo(float valor)
-{
-}
-
 void velocidade(float valor)
 {
   int opcao;
@@ -181,7 +200,7 @@ void velocidade(float valor)
     printf("\nResultado: %.3f mph = %.3f m/s\n", valor, valorConvertido);
     break;
   default:
-    printf("\nOpção inválida!\n");
+    printf("\nOpcao invalida!\n");
     return;
   }
 }
@@ -235,59 +254,55 @@ void potencia(float valor)
   }
 }
 
-int main()
-{
-  int opcao;
-  float valor;
+int main() {
+    
+    int opcao;
+    float valor;
 
-  do
-  {
-    printf("\n======================== MENU ========================\n");
-    printf(" Escolha a opção desejada:                         \n");
-    printf(" 1 - Unidades de comprimento                       \n");
-    printf(" 2 - Unidades de massa                             \n");
-    printf(" 3 - Unidades de volume                            \n");
-    printf(" 4 - Unidades de temperatura                       \n");
-    printf(" 5 - Unidades de tempo                             \n");
-    printf(" 6 - Unidades de velocidade                        \n");
-    printf(" 7 - Unidades de potência                          \n");
-    printf("=====================================================\n");
-    printf("Digite sua opcao: ");
-    scanf("%d", &opcao);
-  } while (opcao < 1 || opcao > 7);
+    do {
+        printf("\n======================== MENU ========================\n");
+        printf(" Escolha a opcao desejada:                          \n");
+        printf(" 1 - Unidades de comprimento                       \n");
+        printf(" 2 - Unidades de massa                             \n");
+        printf(" 3 - Unidades de temperatura                       \n");
+        printf(" 4 - Unidades de velocidade                        \n");
+        printf(" 5 - Unidades de potencia                          \n");
+        printf(" 6 - Sair                                          \n");
+        printf("=====================================================\n");
+        printf("Digite sua opcao: ");
+        scanf("%d", &opcao);
 
-  printf("\nDigite o valor para conversao: ");
-  scanf("%f", &valor);
+        if (opcao == 6) {
+            printf("\nSaindo, ate logo...\n");
+            break;
+        }
 
-  switch (opcao)
-  {
-  case 1:
-    comprimento(valor);
-    break;
-  case 2:
-    massa(valor);
-    break;
-  case 3:
-    volume(valor);
-    break;
-  case 4:
-    temperatura(valor);
-    break;
-  case 5:
-    tempo(valor);
-    break;
-  case 6:
-    velocidade(valor);
-    break;
-  case 7:
-    potencia(valor);
-    break;
-  default:
-    printf("\nOpcao invalida!\n");
-    break;
-  }
+        if (opcao < 1 || opcao > 6) {
+            printf("\nOpcao invalida!\n");
+            continue;
+        }
 
-  return 0;
+        printf("\nInsira o valor para conversao: ");
+        scanf("%f", &valor);
+
+        switch (opcao) {
+            case 1:
+              comprimento(valor);
+             break;
+            case 2: 
+              massa(valor);
+              break;
+            case 3: 
+              temperatura(valor); 
+              break;
+            case 4: 
+              velocidade(valor); 
+              break;
+            case 5: 
+              potencia(valor); 
+              break;
+        }
+    } while (opcao != 6);
+
+    return 0;
 }
-
-
