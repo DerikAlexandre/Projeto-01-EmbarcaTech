@@ -352,6 +352,54 @@ void potencia(float valor)
   }
 }
 
+void dados(double valor) {
+    int unidadeOrigem, unidadeDestino;
+    double fatores[6] = {1.0, 8.0, 8192.0, 8388608.0, 8589934592.0, 8796093022208.0}; // Fatores de conversão
+
+    printf("\n================ CONVERSAO DE DADOS =================\n");
+    printf(" Escolha a unidade de origem:                       \n");
+    printf(" 1 - Bits                                           \n");
+    printf(" 2 - Bytes                                          \n");
+    printf(" 3 - Kilobytes                                      \n");
+    printf(" 4 - Megabytes                                      \n");
+    printf(" 5 - Gigabytes                                      \n");
+    printf(" 6 - Terabytes                                      \n");
+    printf("=====================================================\n");
+    printf("Digite sua opcao (1-6): ");
+
+    if (scanf("%d", &unidadeOrigem) != 1 || unidadeOrigem < 1 || unidadeOrigem > 6) {
+        printf("Unidade de origem invalida! Tente novamente.\n");
+        while (getchar() != '\n'); // Limpa o buffer de entrada
+        return;
+    }
+
+    printf("\nEscolha a unidade de destino:                      \n");
+    printf(" 1 - Bits                                           \n");
+    printf(" 2 - Bytes                                          \n");
+    printf(" 3 - Kilobytes                                      \n");
+    printf(" 4 - Megabytes                                      \n");
+    printf(" 5 - Gigabytes                                      \n");
+    printf(" 6 - Terabytes                                      \n");
+    printf("=====================================================\n");
+    printf("Digite sua opcao (1-6): ");
+
+    if (scanf("%d", &unidadeDestino) != 1 || unidadeDestino < 1 || unidadeDestino > 6) {
+        printf("Unidade de destino invalida! Tente novamente.\n");
+        while (getchar() != '\n'); // Limpa o buffer de entrada
+        return;
+    }
+
+    // Cálculo da conversão
+    double resultado = (valor * fatores[unidadeOrigem - 1]) / fatores[unidadeDestino - 1];
+
+    // Exibir o resultado
+    printf("\n%.6lf na unidade %d convertido para a unidade %d é: %.6lf\n",
+           valor, unidadeOrigem, unidadeDestino, resultado);
+}
+
+
+
+
 int main()
 {
 
@@ -360,26 +408,28 @@ int main()
 
   do
   {
-    printf("\n======================== MENU ========================\n");
-    printf(" Escolha a opcao desejada:                          \n");
-    printf(" 1 - Unidades de comprimento                       \n");
-    printf(" 2 - Unidades de massa                             \n");
-    printf(" 3 - Unidades de temperatura                       \n");
-    printf(" 4 - Unidades de velocidade                        \n");
-    printf(" 5 - Unidades de potencia                          \n");
-    printf(" 6 - Unidades de volume                            \n");
-    printf(" 7 - Sair                                          \n");
-    printf("=====================================================\n");
+printf("\n======================== MENU ========================\n");
+printf(" Escolha a opcao desejada:                          \n");
+printf(" 1 - Unidades de comprimento                       \n");
+printf(" 2 - Unidades de massa                             \n");
+printf(" 3 - Unidades de temperatura                       \n");
+printf(" 4 - Unidades de velocidade                        \n");
+printf(" 5 - Unidades de potencia                          \n");
+printf(" 6 - Unidades de volume                            \n");
+printf(" 7 - Unidades de dados                             \n");
+printf(" 8 - Sair                                          \n");
+printf("=====================================================\n");
+
     printf("Digite sua opcao: ");
     scanf("%d", &opcao);
 
-    if (opcao == 7)
+    if (opcao == 8)
     {
       printf("\nSaindo, ate logo...\n");
       break;
     }
 
-    if (opcao < 1 || opcao > 7)
+    if (opcao < 1 || opcao > 8)
     {
       printf("\nOpcao invalida!\n");
       continue;
@@ -388,28 +438,36 @@ int main()
     printf("\nInsira o valor para conversao: ");
     scanf("%f", &valor);
 
-    switch (opcao)
-    {
+    switch (opcao) {
     case 1:
-      comprimento(valor);
-      break;
+        comprimento(valor);
+        break;
     case 2:
-      massa(valor);
-      break;
+        massa(valor);
+        break;
     case 3:
-      temperatura(valor);
-      break;
+        temperatura(valor);
+        break;
     case 4:
-      velocidade(valor);
-      break;
+        velocidade(valor);
+        break;
     case 5:
-      potencia(valor);
-      break;
+        potencia(valor);
+        break;
     case 6:
-      volume(valor);
-      break;
-    }
-  } while (opcao != 7);
+        volume(valor);
+        break;
+    case 7:
+        dados(valor); // Chamada para a nova função
+        break;
+    case 8:
+        printf("\n Saindo, ate logo...\n");
+        break;
+    default:
+        printf("\nOpcao invalida!\n");
+}
+
+  } while (opcao != 8);
 
   return 0;
 }
