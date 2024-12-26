@@ -1,8 +1,8 @@
 # Projeto-01-EmbarcaTech
 
-SubGrupo 9 - Adryellen, Carlos, Derik, Graziele, Júnior e Rhalyson.
+SubGrupo 9 - Adryellen, Carlos, Derik, Graziele, Júnior e Uriel.
 
-Este projeto foi desenvolvido com o objetivo de realizar conversões entre diferentes unidades de medida. Ele inclui funcionalidades para conversões de temperatura, velocidade, potência, comprimento e massa.
+Este projeto foi desenvolvido com o objetivo de realizar conversões entre diferentes unidades de medida. Ele inclui funcionalidades para conversões de temperatura,Volume , velocidade, potência, comprimento e massa.
 
 O usuário pode selecionar a modalidade de conversão desejada através de um menu e inserir o valor a ser convertido. O sistema realizará automaticamente a conversão para a unidade escolhida e exibirá o resultado.
 
