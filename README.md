@@ -1,5 +1,5 @@
 # **Conversor de Unidades**  
-**EMBARCATECH - U3**  
+**EMBARCATECH - UNIDADE 3**  
 ---
 
 ## **Atividade - Depuração e Versionamento**  
@@ -38,4 +38,22 @@ O programa apresenta um **menu interativo** que permite ao usuário:
 ## **Execução do Programa**  
 
 1. Baixe o arquivo **main.c** deste repositório.  
-2. Compile o arquivo para visualização do menu para conversão.
+2. Compile o código utilizando o compilador GCC.
+3. Execute o programa.
+
+   O menu guiará o usuário durante todo o processo de conversão.
+
+---
+## **Estrutura de Desenvolvimento**
+
+O projeto foi desenvolvido seguindo as boas práticas de colaboração em equipe utilizando o GitHub. As etapas principais incluíram:
+
+- **Cada desenvolvedor criou um branch específico (ex.: feature/comprimento).**
+- **Foram realizados commits regulares com mensagens descritivas.**
+- **Issues e labels foram utilizadas para organizar e acompanhar as tarefas.**
+- **A integração do código foi feita via pull requests, revisados pelo líder do grupo.**
+- **Conflitos de merge foram resolvidos em equipe.**
+- **Testes básicos foram implementados para validar as funcionalidades regularmente.**
+- **O código foi mantido organizado e comentado quando necessário.**
+---
+Nosso grupo trabalhou em conjunto, dividindo responsabilidades e colaborando em cada etapa para garantir que o projeto fosse concluído com sucesso. Este trabalho representa o esforço coletivo de **Adryellen, Carlos, Derik, Graziele, Júnior e Uriel.**
