@@ -81,8 +81,6 @@ void comprimento(float valor)
   printf("Resultado: %.6f\n", resultado);
 }
 
-#include <stdio.h>
-
 void volume(double valor)
 {
   int escolha;
