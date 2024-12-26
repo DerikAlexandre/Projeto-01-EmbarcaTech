@@ -397,6 +397,59 @@ void dados(double valor) {
            valor, unidadeOrigem, unidadeDestino, resultado);
 }
 
+void area(float valor)
+{
+  int medidaAtual, medidaASerConvertida;
+  double valorConvertido;
+
+  do
+  {
+    printf("\n\n===== CONVERSAO DE AREA =====\n\n");
+    printf("Em qual unidade de medida esta o valor que deseja converter?\n");
+    printf("1 - kilometros quadrado\n");
+    printf("2 - hectometros quadrado\n");
+    printf("3 - decametros quadrado\n");
+    printf("4 - metros quadrado \n");
+    printf("5 - decimetros quadrado \n");
+    printf("6 - centimetros quadrado\n");
+    printf("7 - milimetros quadrado \n");
+    printf("\n==============================\n");
+    scanf("%d", &medidaAtual);
+
+    if (medidaAtual < 1 || medidaAtual > 7)
+    {
+      printf("Opcao invalida. Tente novamente.\n");
+    }
+  } while (medidaAtual < 1 || medidaAtual > 7);
+
+  do
+  {
+    printf("\n\n===== CONVERSAO DE AREA =====\n\n");
+    printf("Em qual unidade de medida esta o valor que deseja converter?\n");
+    printf("1 - kilometros quadrado\n");
+    printf("2 - hectometros quadrado\n");
+    printf("3 - decametros quadrado\n");
+    printf("4 - metros quadrado \n");
+    printf("5 - decimetros quadrado \n");
+    printf("6 - centimetros quadrado\n");
+    printf("7 - milimetros quadrado \n");
+    printf("\n==============================\n");
+    scanf("%d", &medidaASerConvertida);
+
+    if (medidaASerConvertida < 1 || medidaASerConvertida > 7)
+    {
+      printf("Opcao invalida. Tente novamente.\n");
+    }
+  } while (medidaASerConvertida < 1 || medidaASerConvertida > 7);
+
+  double fatores[7] = {1000000, 10000, 100, 1, 0.01, 0.0001, 0.000001};
+
+  valorConvertido = (valor * fatores[medidaAtual - 1]) / fatores[medidaASerConvertida - 1];
+
+  printf("O valor %.2lf na unidade %d convertido para a unidade %d eh: %.12lf\n",
+         valor, medidaAtual, medidaASerConvertida, valorConvertido);
+}
+
 
 
 
@@ -417,19 +470,20 @@ printf(" 4 - Unidades de velocidade                        \n");
 printf(" 5 - Unidades de potencia                          \n");
 printf(" 6 - Unidades de volume                            \n");
 printf(" 7 - Unidades de dados                             \n");
-printf(" 8 - Sair                                          \n");
+printf(" 8 - Unidades de area                             \n");
+printf(" 9 - Sair                                          \n");
 printf("=====================================================\n");
 
     printf("Digite sua opcao: ");
     scanf("%d", &opcao);
 
-    if (opcao == 8)
+    if (opcao == 9)
     {
       printf("\nSaindo, ate logo...\n");
       break;
     }
 
-    if (opcao < 1 || opcao > 8)
+    if (opcao < 1 || opcao > 9)
     {
       printf("\nOpcao invalida!\n");
       continue;
@@ -461,13 +515,16 @@ printf("=====================================================\n");
         dados(valor); // Chamada para a nova função
         break;
     case 8:
+        area(valor);  
+        break;
+    case 9:
         printf("\n Saindo, ate logo...\n");
         break;
     default:
         printf("\nOpcao invalida!\n");
 }
 
-  } while (opcao != 8);
+  } while (opcao != 9);
 
   return 0;
 }
