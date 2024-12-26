@@ -1,13 +1,13 @@
 EMBARCATECH - U3
 ATIVIDADE: Depuração e Versionamento
 
-Grupo 4 - SubGrupo 9;
-Adryellen
-Carlos
-Derik
-Graziele
-Júnior
-Uriel
+Grupo 4 - SubGrupo 9<br/>
+Adryellen<br/>
+Carlos<br/>
+Derik<br/>
+Graziele<br/>
+Júnior<br/>
+Uriel<br/>
 
 Este projeto foi desenvolvido para facilitar a conversão entre diferentes unidades de medida, abrangendo as seguintes modalidades: comprimento, massa, temperatura, velocidade, potência, volume, dados e área.
 
