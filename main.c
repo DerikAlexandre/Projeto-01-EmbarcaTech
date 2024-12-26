@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<math.h>
 
 // Funções de conversão para comprimento
 double m_para_km(double m) { return m / 1000.0; }
@@ -32,6 +33,7 @@ void comprimento(float valor)
   printf("10 - Milimetros (mm) -> Quilometros (Km)\n");
   printf("11 - Milimetros (mm) -> Metros (m)      \n");
   printf("12 - Milimetros (mm) -> Centimetros (cm)\n");
+  printf("\n======================================\n");
   printf("Escolha uma opcao (1-12): \n");
   scanf("%d", &escolha);
 
@@ -86,19 +88,20 @@ void volume(double valor)
   int escolha;
   double resultado;
 
-  printf("\n\n===== CONVERSAO DE VOLUME =====\n\n");
-  printf("1 - Litros (L) -> Mililitros (mL)      \n");
-  printf("2 - Litros (L) -> Metros cúbicos (m³)  \n");
-  printf("3 - Litros (L) -> Centímetros cúbicos (cm³)\n");
-  printf("4 - Mililitros (mL) -> Litros (L)      \n");
-  printf("5 - Mililitros (mL) -> Metros cúbicos (m³)\n");
-  printf("6 - Mililitros (mL) -> Centímetros cúbicos (cm³)\n");
-  printf("7 - Metros cúbicos (m³) -> Litros (L)  \n");
-  printf("8 - Metros cúbicos (m³) -> Mililitros (mL)\n");
-  printf("9 - Metros cúbicos (m³) -> Centímetros cúbicos (cm³)\n");
-  printf("10 - Centímetros cúbicos (cm³) -> Litros (L)\n");
-  printf("11 - Centímetros cúbicos (cm³) -> Mililitros (mL)\n");
-  printf("12 - Centímetros cúbicos (cm³) -> Metros cúbicos (m³)\n");
+  printf("\n\n======= CONVERSAO DE VOLUME =======\n\n");
+  printf("1 - Litros (L) -> Mililitros (mL)                    \n");
+  printf("2 - Litros (L) -> Metros cubicos (m^3)                \n");
+  printf("3 - Litros (L) -> Centimetros cubicos (cm^3)          \n");
+  printf("4 - Mililitros (mL) -> Litros (L)                    \n");
+  printf("5 - Mililitros (mL) -> Metros cubicos (m^3)           \n");
+  printf("6 - Mililitros (mL) -> Centimetros cubicos (cm^3)     \n");
+  printf("7 - Metros cubicos (m^3) -> Litros (L)                \n");
+  printf("8 - Metros cubicos (m^3) -> Mililitros (mL)           \n");
+  printf("9 - Metros cubicos (m^3) -> Centimetros cubicos (cm^3)\n");
+  printf("10 - Centimetros cubicos (cm^3) -> Litros (L)         \n");
+  printf("11 - Centimetros cubicos (cm^3) -> Mililitros (mL)    \n");
+  printf("12 - Centimetros cubicos (cm^3) -> Metros cubicos (m^3)\n");
+  printf("\n======================================\n");
   printf("Escolha uma opcao (1-12): \n");
   scanf("%d", &escolha);
 
@@ -161,6 +164,7 @@ void massa(float valor)
     printf("5 - Decigrama (dg) \n");
     printf("6 - Centigrama (cg)\n");
     printf("7 - Miligrama (mg) \n");
+    printf("\n==============================\n");
     scanf("%d", &medidaAtual);
 
     if (medidaAtual < 1 || medidaAtual > 7)
@@ -171,6 +175,7 @@ void massa(float valor)
 
   do
   {
+    printf("\n\n===== CONVERSAO DE MASSA =====\n\n");
     printf("Para qual unidade de medida deseja converter?\n");
     printf("1 - Decagrama (dag)\n");
     printf("2 - Hectograma (hg)\n");
@@ -179,6 +184,7 @@ void massa(float valor)
     printf("5 - Decigrama (dg) \n");
     printf("6 - Centigrama (cg)\n");
     printf("7 - Miligrama (mg) \n");
+    printf("\n==============================\n");
     scanf("%d", &medidaASerConvertida);
 
     if (medidaASerConvertida < 1 || medidaASerConvertida > 7)
@@ -361,7 +367,7 @@ int main()
     printf(" 3 - Unidades de temperatura                       \n");
     printf(" 4 - Unidades de velocidade                        \n");
     printf(" 5 - Unidades de potencia                          \n");
-    printf(" 6 - Unidades de volume                          \n");
+    printf(" 6 - Unidades de volume                            \n");
     printf(" 7 - Sair                                          \n");
     printf("=====================================================\n");
     printf("Digite sua opcao: ");
