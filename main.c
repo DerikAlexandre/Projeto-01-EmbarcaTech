@@ -207,12 +207,12 @@ void temperatura(float valor)
   int selecao;
   float result;
   printf("\n\n=== CONVERSAO DE TEMPERATURA ===\n\n");
-  printf("1-Celsius -> Fahrenheit\n");
-  printf("2-Celsius -> Kelvin    \n");
-  printf("3-Fahrenheit -> Celsius\n");
-  printf("4-Fahrenheit -> Kelvin \n");
-  printf("5-Kelvin -> Celsius    \n");
-  printf("6-Kelvin -> Fahrenheit \n");
+  printf("1-Celsius    -> Fahrenheit\n");
+  printf("2-Celsius    -> Kelvin    \n");
+  printf("3-Fahrenheit -> Celsius   \n");
+  printf("4-Fahrenheit -> Kelvin    \n");
+  printf("5-Kelvin     -> Celsius   \n");
+  printf("6-Kelvin     -> Fahrenheit\n");
   printf("\n=====================\n");
   scanf("%d", &selecao);
 
@@ -222,35 +222,29 @@ void temperatura(float valor)
     result = valor * 9 / 5 + 32;
     printf("\nValor convertido: %.2fF", result);
     break;
-
   case 2:
     result = valor + 273.15;
     printf("\nValor convertido: %.2fK", result);
     break;
-
   case 3:
     result = (valor - 32) * 5 / 9;
     printf("\nValor convertido: %.2fC", result);
     break;
-
   case 4:
     result = (valor - 32) * 5 / 9 + 273.15;
     printf("\nValor convertido: %.2fK", result);
     break;
-
   case 5:
     result = valor - 273.15;
     printf("\nValor convertido: %.2fC", result);
     break;
-
   case 6:
     result = (valor - 273.15) * 9 / 5 + 32;
     printf("\nValor convertido: %.2fF", result);
     break;
-
   default:
     printf("\nValor invalido!");
-    break;
+    return;
   }
 }
 
@@ -450,7 +444,52 @@ void area(float valor)
          valor, medidaAtual, medidaASerConvertida, valorConvertido);
 }
 
+void tempo(float valor)
+{
 
+  int selecao;
+  float result;
+  printf("\n\n=== CONVERSAO DE TEMPO ===\n\n");
+  printf("1-Segundos -> Minutos \n");
+  printf("2-Segundos -> Horas   \n");
+  printf("3-Minutos  -> Segundos\n");
+  printf("4-Minutos  -> Horas   \n");
+  printf("5-Horas    -> Segundos\n");
+  printf("6-Horas    -> Minutos \n");
+  printf("\n=====================\n");
+  scanf("%d", &selecao);
+
+  switch (selecao)
+  {
+  case 1:
+    result = valor/60;
+    printf("\nValor convertido: %.2f minutos.\n", result);
+    break;
+  case 2:
+    result = valor/3600;
+    printf("\nValor convertido: %.2f horas.\n", result);
+    break;
+  case 3:
+    result = valor*60;
+    printf("\nValor convertido: %.2f segundos.\n", result);
+    break;
+  case 4:
+    result = valor/60;
+    printf("\nValor convertido: %.2f horas.\n", result);
+    break;
+  case 5:
+    result = valor*3600;
+    printf("\nValor convertido: %.2f segundos.\n", result);
+    break;
+  case 6:
+    result = valor*60;
+    printf("\nValor convertido: %.2f minutos.\n", result);
+    break;
+  default:
+    printf("\nValor invalido!");
+    return;
+  }
+}
 
 
 int main()
@@ -462,7 +501,7 @@ int main()
   do
   {
 printf("\n======================== MENU ========================\n");
-printf(" Escolha a opcao desejada:                          \n");
+printf(" Escolha a opcao desejada:                         \n");
 printf(" 1 - Unidades de comprimento                       \n");
 printf(" 2 - Unidades de massa                             \n");
 printf(" 3 - Unidades de temperatura                       \n");
@@ -470,20 +509,21 @@ printf(" 4 - Unidades de velocidade                        \n");
 printf(" 5 - Unidades de potencia                          \n");
 printf(" 6 - Unidades de volume                            \n");
 printf(" 7 - Unidades de dados                             \n");
-printf(" 8 - Unidades de area                             \n");
-printf(" 9 - Sair                                          \n");
+printf(" 8 - Unidades de area                              \n");
+printf(" 9 - Unidades de tempo                             \n");
+printf(" 10 - Sair                                         \n");
 printf("=====================================================\n");
 
     printf("Digite sua opcao: ");
     scanf("%d", &opcao);
 
-    if (opcao == 9)
+    if (opcao == 10)
     {
       printf("\nSaindo, ate logo...\n");
       break;
     }
 
-    if (opcao < 1 || opcao > 9)
+    if (opcao < 1 || opcao > 10)
     {
       printf("\nOpcao invalida!\n");
       continue;
@@ -518,13 +558,16 @@ printf("=====================================================\n");
         area(valor);  
         break;
     case 9:
+        tempo(valor);  
+        break;
+    case 10:
         printf("\n Saindo, ate logo...\n");
         break;
     default:
         printf("\nOpcao invalida!\n");
 }
 
-  } while (opcao != 9);
+  } while (opcao != 10);
 
   return 0;
 }
