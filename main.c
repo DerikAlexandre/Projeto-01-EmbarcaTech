@@ -256,11 +256,11 @@ void velocidade(float valor)
   printf("\n================ CONVERSAO DE VELOCIDADE ================\n");
   printf(" Escolha a conversao desejada:                        \n");
   printf(" 1 - Metros por segundo (m/s) -> Kilometros por hora (km/h) \n");
-  printf(" 2 - Metros por segundo (m/s) -> Milhas por hora (mph) \n");
+  printf(" 2 - Metros por segundo (m/s) -> Milhas por hora (mph)   \n");
   printf(" 3 - Kilometros por hora (km/h) -> Metros por segundo (m/s) \n");
   printf(" 4 - Kilometros por hora (km/h) -> Milhas por hora (mph) \n");
   printf(" 5 - Milhas por hora (mph) -> Kilometros por hora (km/h) \n");
-  printf(" 6 - Milhas por hora (mph) -> Metros por segundo (m/s)\n");
+  printf(" 6 - Milhas por hora (mph) -> Metros por segundo (m/s)   \n");
   printf("=========================================================\n");
   printf("Digite sua opcao: ");
   scanf("%d", &opcao);
@@ -387,7 +387,7 @@ void dados(double valor) {
     double resultado = (valor * fatores[unidadeOrigem - 1]) / fatores[unidadeDestino - 1];
 
     // Exibir o resultado
-    printf("\n%.6lf na unidade %d convertido para a unidade %d é: %.6lf\n",
+    printf("\n%.6lf na unidade %d convertido para a unidade %d eh: %.6lf\n",
            valor, unidadeOrigem, unidadeDestino, resultado);
 }
 
@@ -463,27 +463,27 @@ void tempo(float valor)
   {
   case 1:
     result = valor/60;
-    printf("\nValor convertido: %.2f minutos.\n", result);
+    printf("\nValor convertido: %.5f minutos.\n", result);
     break;
   case 2:
     result = valor/3600;
-    printf("\nValor convertido: %.2f horas.\n", result);
+    printf("\nValor convertido: %.5f horas.\n", result);
     break;
   case 3:
     result = valor*60;
-    printf("\nValor convertido: %.2f segundos.\n", result);
+    printf("\nValor convertido: %.5f segundos.\n", result);
     break;
   case 4:
     result = valor/60;
-    printf("\nValor convertido: %.2f horas.\n", result);
+    printf("\nValor convertido: %.5f horas.\n", result);
     break;
   case 5:
     result = valor*3600;
-    printf("\nValor convertido: %.2f segundos.\n", result);
+    printf("\nValor convertido: %.5f segundos.\n", result);
     break;
   case 6:
     result = valor*60;
-    printf("\nValor convertido: %.2f minutos.\n", result);
+    printf("\nValor convertido: %.5f minutos.\n", result);
     break;
   default:
     printf("\nValor invalido!");
