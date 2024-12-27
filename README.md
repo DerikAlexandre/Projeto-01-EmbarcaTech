@@ -26,7 +26,8 @@ Este projeto foi desenvolvido para **facilitar a conversão entre diferentes uni
 - **Potência**  
 - **Volume**  
 - **Dados**  
-- **Área**  
+- **Área**
+- **Tempo** 
 
 O programa apresenta um **menu interativo** que permite ao usuário:  
 1. Selecionar a modalidade desejada.  
