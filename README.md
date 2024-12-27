@@ -7,12 +7,12 @@
 ---
 
 ### **Grupo 4 - SubGrupo 9**  
-- **Adryellen**  
-- **Carlos**  
-- **Derik**  
-- **Graziele**  
-- **Júnior**  
-- **Uriel**  
+- **Adryellen Alves de Souza**  
+- **Carlos Henrique Silva Lopes**  
+- **Derik Alexandre Alves de Andrade**  
+- **Graziele Coelho de Alencar**  
+- **Nivaldo Rodrigues da Silva Júnior**  
+- **Uriel Hapuque Barboza Santos**  
 
 ---
 
